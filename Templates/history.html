@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>History</title>
+</head>
+<body>
+
+<h2>Prediction History</h2>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Username</th>
+        <th>Age</th>
+        <th>Glucose</th>
+        <th>BP</th>
+        <th>Insulin</th>
+        <th>BMI</th>
+        <th>Skin Thickness</th>
+        <th>DPF</th>
+        <th>Result</th>
+    </tr>
+
+    {% for row in data %}
+    <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2] }}</td>
+        <td>{{ row[3] }}</td>
+        <td>{{ row[4] }}</td>
+        <td>{{ row[5] }}</td>
+        <td>{{ row[6] }}</td>
+        <td>{{ row[7] }}</td>
+        <td>{{ row[8] }}</td>
+        <td>{{ row[9] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<br>
+<a href="/">Go Home</a>
+
+</body>
+</html>

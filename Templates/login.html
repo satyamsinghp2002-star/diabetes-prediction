@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+
+    <!-- ✅ CSS ADD -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="container">
+    <div class="contact-box">
+        <div class="right">
+
+            <h2>Login</h2>
+
+            <form method="POST">
+                <input type="text" name="username" placeholder="Username" class="field" required>
+                <input type="password" name="password" placeholder="Password" class="field" required>
+                <button class="btn" type="submit">Login</button>
+            </form>
+
+            <h2>Signup</h2>
+
+            <form action="/signup" method="POST">
+                <input type="text" name="username" placeholder="New Username" class="field" required>
+                <input type="password" name="password" placeholder="New Password" class="field" required>
+                <button class="btn" type="submit">Signup</button>
+            </form>
+
+            <br>
+            <a href="/">Go Home</a>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
