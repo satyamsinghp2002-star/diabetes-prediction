@@ -163,12 +163,19 @@ def result():
             return render_template("error.html", error="Invalid Input!")
 
         input_data = [
-            Glucose, BloodPressure, SkinThickness,
-            Insulin, BMI, DPF, Age
+        float(Glucose),
+        float(BloodPressure),
+        float(SkinThickness),
+        float(Insulin),
+        float(BMI),
+        float(DPF),
+        float(Age)
         ]
 
-        input_array = np.array([input_data])
+        input_array = np.array(input_data).reshape(1, -1)
+
         input_scaled = scaler.transform(input_array)
+        # prediction = model.predict(input_scaled)[0]
 
         prediction = model.predict(input_scaled)[0]
         result_text = "Diabetic" if prediction == 1 else "Not Diabetic"
